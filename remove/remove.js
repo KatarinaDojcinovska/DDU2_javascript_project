@@ -20,3 +20,19 @@ newRandomNumberButton.addEventListener("click", function (){
         }
     }
 });
+removebutton.addEventListener("click", function (){
+    const numberInput = document.getElementById("randomNumberSpace");
+    const numberInputRemove = document.getElementById("removeThis");
+    const targetNumbers = document.querySelectorAll(".markTarget");
+    numberInputRemove.value = numberInput.textContent;
+
+    if (targetNumbers) {
+        numberInputRemove.textContent = `${numberInput.textContent} removed ${targetNumbers.length} times`; 
+        for (const targetNumber of targetNumbers) {
+            targetNumber.classList.add("marketclose");
+            targetNumber.textContent = "x";
+        }
+    } else {
+        numberInputRemove.textContent = "Nothing to remove";
+    }
+});
