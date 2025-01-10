@@ -46,3 +46,5 @@ function reset (){
        }
     })
 }
+const createBtn = document.getElementById("create");
+createBtn.addEventListener("click", init);
