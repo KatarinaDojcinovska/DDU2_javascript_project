@@ -47,3 +47,15 @@ function findMissingNumbers (array){
   return missingNumbersArray.toString(); 
 }
 
+function writeMissingNumber (){
+    const noPlace = document.getElementById("noPlace");
+    const number = document.querySelectorAll(".numberDiv");
+
+    const numberArray = [];
+
+    for (let num of number){
+      numberArray.push(parseInt(num.textContent));
+    }
+    noPlace.textContent = findMissingNumbers(numberArray);
+}
+
