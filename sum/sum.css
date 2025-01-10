@@ -1,0 +1,47 @@
+:root{
+    --body-color:#85776e;
+    --border-color:#e8dfdb;
+    --base-size-h2:16px;
+    --button-color: #9c8577;
+    --base-paragraf-size: 15px;
+    --text-color-h1:#9e6d5c;
+    --text-color-h2:#9e6d5c;
+    --text-a:#000000;
+    --number-color:#9e6d5c;
+    --number-size: 19px;
+    --box-shadow: 0 0 16px 2px #61554c;
+    --text-shadow: 0 0 16px 2px #9c8577;
+    --remove-selectedButton: rgb(99, 10, 10);
+    --selected-color: #57352ac6;
+}
+
+#sectionSumAll, #sectionMarked{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#totalNumbers, #allTogether{
+    width: 100px;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: white;
+    font-size: var(--number-size);
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+
+}
+
+#reset{
+    width: 80px;
+    padding: 10px 20px;
+    font-size: var(--base-paragraf-size);
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.selected {
+    background-color: var(--selected-color) ;
+}
