@@ -15,3 +15,14 @@ function howManyTimesRepeated (){
     } 
   }
 
+  const nums = Object.values(objectOfExisting)
+  let maxVal = 0;
+  for(let i = 0; i < nums.length; i++){
+    maxVal = Math.max(maxVal, nums[i]);
+  }
+ 
+  for (let key in objectOfExisting){
+    if(objectOfExisting[key] === maxVal){
+      mostRepeatedNumbers.push(key)
+    }
+  }
