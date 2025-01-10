@@ -26,3 +26,14 @@ function howManyTimesRepeated (){
       mostRepeatedNumbers.push(key)
     }
   }
+  for(let n of numbers){
+    for(let most of mostRepeatedNumbers){
+      if(parseInt(n.textContent) === parseInt(most)){
+        n.classList.add("selected");
+      }
+    }
+  }
+  const repeatedN = document.getElementById("repeated");
+  repeatedN.textContent = `${mostRepeatedNumbers} (Repeated ${maxVal} times)`;
+}
+
