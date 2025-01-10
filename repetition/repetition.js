@@ -59,3 +59,10 @@ function writeMissingNumber (){
     noPlace.textContent = findMissingNumbers(numberArray);
 }
 
+function init (){
+  writeMissingNumber()
+  howManyTimesRepeated();
+}
+
+const bCreate = document.getElementById("create");
+bCreate.addEventListener("click", init);
