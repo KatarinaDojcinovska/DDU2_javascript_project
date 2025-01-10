@@ -29,3 +29,8 @@ function addNumbersTogether (){
         })
     }
 }
+function init () {
+    addNumbersTogether();
+    add();
+    reset();
+}
