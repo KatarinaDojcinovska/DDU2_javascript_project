@@ -10,3 +10,22 @@ function add () {
     totalAddNumbers.textContent = `${totalSum}`;
 }
 
+function addNumbersTogether (){
+    let sum = 0;
+    const allNumbersDivs = document.querySelectorAll(".numberDiv");
+    const allTogether = document.getElementById("allTogether");
+
+    for(let allNumbersDiv of allNumbersDivs){
+        allNumbersDiv.addEventListener("click", function (){
+
+            if(!allNumbersDiv.classList.contains("selected")){
+                sum += parseInt(allNumbersDiv.textContent);
+                allNumbersDiv.classList.add("selected");
+            } else {
+                sum -= parseInt(allNumbersDiv.textContent);
+                allNumbersDiv.classList.remove("selected");
+            }
+            allTogether.textContent = `${sum}`;
+        })
+    }
+}
