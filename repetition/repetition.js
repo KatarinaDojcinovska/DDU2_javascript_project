@@ -37,3 +37,13 @@ function howManyTimesRepeated (){
   repeatedN.textContent = `${mostRepeatedNumbers} (Repeated ${maxVal} times)`;
 }
 
+function findMissingNumbers (array){
+    const missingNumbersArray = [];
+    for (let i = 0; i < 100; i++) {
+      if (!array.includes(i)) {
+        missingNumbersArray.push(i)
+      }
+    }
+  return missingNumbersArray.toString(); 
+}
+
