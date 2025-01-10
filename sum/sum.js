@@ -34,3 +34,15 @@ function init () {
     add();
     reset();
 }
+function reset (){
+    const buttonReset = document.getElementById("reset");
+    const allTogether = document.getElementById("allTogether");
+    buttonReset.addEventListener("click", function (){
+        const allNumbersDiv = document.querySelectorAll(".numberDiv.selected");
+       allTogether.textContent = "";
+
+       for (let number of allNumbersDiv){
+        number.classList.remove("selected");
+       }
+    })
+}
