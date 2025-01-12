@@ -27,3 +27,14 @@ function findCopy (){
   }
 }
 
+function reset (){
+  const resetB = document.getElementById("resetButtonFindSame");
+  resetB.addEventListener("click", function (){
+    const numberAll = document.querySelectorAll(".numberDiv");
+    
+    for(let n of numberAll){
+      n.classList.remove("selected");
+      text.textContent = "Click on the number to find copies :";
+    }
+  })
+}
