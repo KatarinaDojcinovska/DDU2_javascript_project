@@ -38,3 +38,10 @@ function reset (){
     }
   })
 }
+function init(){
+  findCopy();
+  reset()
+}
+
+const createB = document.getElementById("create");
+createB.addEventListener("click", init);
