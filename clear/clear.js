@@ -18,3 +18,17 @@ function generatebuttons (){
     }
 }
 
+const clearButton = document.getElementById("clearbutton");
+
+clearButton.addEventListener("click", function (){
+    const removedbuttons = document.querySelectorAll(".remove");
+   
+    for(let buttonRemoved of removedbuttons){
+        buttonRemoved.textContent = generateRandomNumber(0, 99);
+        buttonRemoved.classList.add("button");
+        buttonRemoved.classList.remove("remove");
+    }
+}) 
+
+const bCreate = document.getElementById("create");
+bCreate.addEventListener("click", generatebuttons);
